@@ -11,6 +11,7 @@ import SwiftUI
 struct LoginView: View {
     @State var email: String = ""
     @State var password: String = ""
+    @State var enviroment: Int = 0
 //    var login: () -> Void
     
     var body: some View {
@@ -21,16 +22,8 @@ struct LoginView: View {
             Text("Password:")
                 .font(.title)
             SecureTextField(password: $password, login: login)
-            Button(action: login) {
-                Spacer()
-                Text("Login")
-                    .font(.title)
-                Spacer()
-            }
-            .padding()
-            .background(Color(UIColor.green))
-            .cornerRadius(5.0)
-            
+            LoginButton(login: login)
+            EnviromentPicker(enviroment: $enviroment)
             Spacer()
         }
         .padding(.leading, 15.0)
@@ -42,7 +35,7 @@ struct LoginView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
     }
@@ -69,5 +62,32 @@ struct SecureTextField: View {
             .padding()
             .background(Color(UIColor.lightGray))
             .cornerRadius(5.0)
+    }
+}
+
+struct EnviromentPicker: View {
+    @Binding var enviroment: Int
+    var body: some View {
+        Picker("", selection: $enviroment) {
+            Text("CERT").tag(1)
+            Text("PROD").tag(2)
+        }
+        .pickerStyle(SegmentedPickerStyle())
+    }
+}
+
+struct LoginButton: View {
+    var login: () -> Void
+    
+    var body: some View {
+        Button(action: login) {
+            Spacer()
+            Text("Login")
+                .font(.title)
+            Spacer()
+        }
+        .padding()
+        .background(Color(UIColor.green))
+        .cornerRadius(5.0)
     }
 }
