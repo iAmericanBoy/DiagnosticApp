@@ -15,6 +15,9 @@
 		B63A896D2380446E00951FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63A896B2380446E00951FC0 /* LaunchScreen.storyboard */; };
 		B6475F40238056E3007FBF7F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6475F3F238056E3007FBF7F /* LoginViewModel.swift */; };
 		B6475F422381A6A9007FBF7F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6475F412381A6A9007FBF7F /* LoadingView.swift */; };
+		B6475F462381B437007FBF7F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6475F452381B436007FBF7F /* UIColor+Extension.swift */; };
+		B6475F482381B87D007FBF7F /* MockLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6475F472381B87D007FBF7F /* MockLogin.swift */; };
+		B6475F4A2381B8F1007FBF7F /* SessionEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6475F492381B8F1007FBF7F /* SessionEnviroment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		B63A896E2380446E00951FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6475F3F238056E3007FBF7F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B6475F412381A6A9007FBF7F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B6475F452381B436007FBF7F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B6475F472381B87D007FBF7F /* MockLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLogin.swift; sourceTree = "<group>"; };
+		B6475F492381B8F1007FBF7F /* SessionEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEnviroment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +68,11 @@
 			children = (
 				B63A89602380446200951FC0 /* AppDelegate.swift */,
 				B63A89622380446200951FC0 /* SceneDelegate.swift */,
+				B6475F4B2381B98C007FBF7F /* Service */,
 				B6475F432381AAF5007FBF7F /* Views */,
 				B63A89662380446E00951FC0 /* Assets.xcassets */,
 				B63A896B2380446E00951FC0 /* LaunchScreen.storyboard */,
+				B6475F452381B436007FBF7F /* UIColor+Extension.swift */,
 				B63A896E2380446E00951FC0 /* Info.plist */,
 				B63A89682380446E00951FC0 /* Preview Content */,
 			);
@@ -93,6 +101,31 @@
 			children = (
 				B63A89642380446200951FC0 /* LoginView.swift */,
 				B6475F3F238056E3007FBF7F /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B6475F4B2381B98C007FBF7F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B6475F4D2381B9A2007FBF7F /* Login */,
+				B6475F4C2381B99A007FBF7F /* Network */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B6475F4C2381B99A007FBF7F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B6475F492381B8F1007FBF7F /* SessionEnviroment.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B6475F4D2381B9A2007FBF7F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B6475F472381B87D007FBF7F /* MockLogin.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -173,6 +206,9 @@
 				B63A89632380446200951FC0 /* SceneDelegate.swift in Sources */,
 				B6475F422381A6A9007FBF7F /* LoadingView.swift in Sources */,
 				B63A89652380446200951FC0 /* LoginView.swift in Sources */,
+				B6475F4A2381B8F1007FBF7F /* SessionEnviroment.swift in Sources */,
+				B6475F462381B437007FBF7F /* UIColor+Extension.swift in Sources */,
+				B6475F482381B87D007FBF7F /* MockLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
