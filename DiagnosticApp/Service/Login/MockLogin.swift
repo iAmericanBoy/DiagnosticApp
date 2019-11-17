@@ -16,8 +16,9 @@ class MockLogin: LoginProtocol {
     func login(username: String, password: String, enviroment: SessionEnviroment, completion: @escaping (Bool) -> Void) {
         switch enviroment {
         case .Certification:
-            _ = Timer(timeInterval: 3.0, repeats: false) { _ in print("Done!") }
-            completion(true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                completion(true)
+            }
         case .Production:
             completion(false)
         }

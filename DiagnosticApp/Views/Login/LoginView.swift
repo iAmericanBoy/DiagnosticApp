@@ -92,7 +92,7 @@ struct LoginButton: View {
         .background(Color(UIColor.lushGreenColor))
         .cornerRadius(5.0)
         .modifier(Shake(animatableData: CGFloat(wasFail ? 1 : 0 )))
-        .disabled(!isDisabled)
+        .disabled(isDisabled)
     }
 }
 

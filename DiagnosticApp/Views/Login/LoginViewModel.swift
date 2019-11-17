@@ -12,7 +12,7 @@ import Combine
 class LoginViewModel: ObservableObject  {
     @Published var email: String = ""
     @Published var password: String = ""
-    @Published var enviroment: Int = 0
+    @Published var enviroment: Int = 1
     
     @Published var isLoading: Bool = false
     @Published var isLoginDisabled: Bool = false
@@ -27,8 +27,10 @@ class LoginViewModel: ObservableObject  {
     
     func login() {
         isLoading = true
+        
         loginService.login(username: email, password: password, enviroment: SessionEnviroment(rawValue: enviroment)!) { [weak self] result in
             self?.isLoading = false
+            
             switch result {
             case true:
                 self?.isLoggedIn = true
