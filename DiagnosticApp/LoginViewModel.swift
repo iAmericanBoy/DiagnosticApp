@@ -14,5 +14,7 @@ class LoginViewModel: ObservableObject  {
     @Published var password: String = ""
     @Published var enviroment: Int = 0
     
+    @Published var isLoading: Bool = false
+    
     func login() {}
 }

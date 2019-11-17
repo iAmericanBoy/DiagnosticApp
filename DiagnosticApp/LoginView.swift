@@ -13,19 +13,21 @@ struct LoginView: View {
     @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Email:")
-                .font(.title)
-            EmailTextField(email: $viewModel.email)
-            Text("Password:")
-                .font(.title)
-            SecureTextField(password: $viewModel.password, login: viewModel.login)
-            LoginButton(login: viewModel.login)
-            EnviromentPicker(enviroment: $viewModel.enviroment)
-            Spacer()
+        LoadingView(isShowing: $viewModel.isLoading) {
+            VStack(alignment: .leading) {
+                Text("Email:")
+                    .font(.title)
+                EmailTextField(email: self.$viewModel.email)
+                Text("Password:")
+                    .font(.title)
+                SecureTextField(password: self.$viewModel.password, login: self.viewModel.login)
+                LoginButton(login: self.viewModel.login)
+                EnviromentPicker(enviroment: self.$viewModel.enviroment)
+                Spacer()
+            }
+            .padding(.leading, 15.0)
+            .padding(.trailing, 15.0)
         }
-        .padding(.leading, 15.0)
-        .padding(.trailing, 15.0)
     }
 }
 
@@ -37,7 +39,7 @@ struct LoginView_Previews: PreviewProvider {
 
 struct EmailTextField: View {
     @Binding var email: String
-
+    
     var body: some View {
         TextField("Enter email", text: $email)
             .foregroundColor(Color.white)
@@ -49,6 +51,7 @@ struct EmailTextField: View {
 
 struct SecureTextField: View {
     @Binding var password: String
+    
     var login: () -> Void
     
     var body: some View {
@@ -61,6 +64,7 @@ struct SecureTextField: View {
 
 struct EnviromentPicker: View {
     @Binding var enviroment: Int
+    
     var body: some View {
         Picker("", selection: $enviroment) {
             Text("CERT").tag(1)
