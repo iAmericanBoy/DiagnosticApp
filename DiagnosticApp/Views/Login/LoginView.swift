@@ -21,7 +21,7 @@ struct LoginView: View {
                 Text("Password:")
                     .font(.title)
                 SecureTextField(password: self.$viewModel.password, login: self.viewModel.login)
-                LoginButton(login: self.viewModel.login)
+                LoginButton(isDisabled: self.$viewModel.isLoginDisabled, wasFail: self.$viewModel.isLoginWrong, login: self.viewModel.login)
                 EnviromentPicker(enviroment: self.$viewModel.enviroment)
                 Spacer()
             }
@@ -75,6 +75,9 @@ struct EnviromentPicker: View {
 }
 
 struct LoginButton: View {
+    @Binding var isDisabled: Bool
+    @Binding var wasFail: Bool
+
     var login: () -> Void
     
     var body: some View {
@@ -87,5 +90,17 @@ struct LoginButton: View {
         .padding()
         .background(Color(UIColor.green))
         .cornerRadius(5.0)
+        .modifier(Shake(animatableData: CGFloat(wasFail ? 1 : 0 )))
+        .disabled(!isDisabled)
+    }
+}
+
+struct Shake: GeometryEffect {
+    var amount: CGFloat = 5
+    var shakesPerUnit: CGFloat = 5
+    var animatableData: CGFloat
+    
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        ProjectionTransform(CGAffineTransform(translationX: amount * sin(animatableData * .pi * shakesPerUnit), y: 0))
     }
 }

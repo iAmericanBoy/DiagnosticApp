@@ -15,6 +15,8 @@ class LoginViewModel: ObservableObject  {
     @Published var enviroment: Int = 0
     
     @Published var isLoading: Bool = false
-    
+    @Published var isLoginDisabled: Bool = false
+    @Published var isLoginWrong: Bool = false
+
     func login() {}
 }
