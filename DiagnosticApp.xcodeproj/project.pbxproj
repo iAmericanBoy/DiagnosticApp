@@ -62,9 +62,7 @@
 			children = (
 				B63A89602380446200951FC0 /* AppDelegate.swift */,
 				B63A89622380446200951FC0 /* SceneDelegate.swift */,
-				B63A89642380446200951FC0 /* LoginView.swift */,
-				B6475F412381A6A9007FBF7F /* LoadingView.swift */,
-				B6475F3F238056E3007FBF7F /* LoginViewModel.swift */,
+				B6475F432381AAF5007FBF7F /* Views */,
 				B63A89662380446E00951FC0 /* Assets.xcassets */,
 				B63A896B2380446E00951FC0 /* LaunchScreen.storyboard */,
 				B63A896E2380446E00951FC0 /* Info.plist */,
@@ -79,6 +77,24 @@
 				B63A89692380446E00951FC0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B6475F432381AAF5007FBF7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6475F442381AB05007FBF7F /* Login */,
+				B6475F412381A6A9007FBF7F /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6475F442381AB05007FBF7F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B63A89642380446200951FC0 /* LoginView.swift */,
+				B6475F3F238056E3007FBF7F /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
