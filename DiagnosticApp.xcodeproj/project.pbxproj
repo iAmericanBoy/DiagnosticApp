@@ -13,6 +13,7 @@
 		B63A89672380446E00951FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B63A89662380446E00951FC0 /* Assets.xcassets */; };
 		B63A896A2380446E00951FC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B63A89692380446E00951FC0 /* Preview Assets.xcassets */; };
 		B63A896D2380446E00951FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63A896B2380446E00951FC0 /* LaunchScreen.storyboard */; };
+		B6475F40238056E3007FBF7F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6475F3F238056E3007FBF7F /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B63A89692380446E00951FC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B63A896C2380446E00951FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B63A896E2380446E00951FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6475F3F238056E3007FBF7F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B63A89602380446200951FC0 /* AppDelegate.swift */,
 				B63A89622380446200951FC0 /* SceneDelegate.swift */,
 				B63A89642380446200951FC0 /* LoginView.swift */,
+				B6475F3F238056E3007FBF7F /* LoginViewModel.swift */,
 				B63A89662380446E00951FC0 /* Assets.xcassets */,
 				B63A896B2380446E00951FC0 /* LaunchScreen.storyboard */,
 				B63A896E2380446E00951FC0 /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6475F40238056E3007FBF7F /* LoginViewModel.swift in Sources */,
 				B63A89612380446200951FC0 /* AppDelegate.swift in Sources */,
 				B63A89632380446200951FC0 /* SceneDelegate.swift in Sources */,
 				B63A89652380446200951FC0 /* LoginView.swift in Sources */,

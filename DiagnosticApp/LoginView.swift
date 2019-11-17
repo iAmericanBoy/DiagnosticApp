@@ -9,29 +9,23 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var enviroment: Int = 0
-//    var login: () -> Void
+    
+    @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
     
     var body: some View {
         VStack(alignment: .leading) {
             Text("Email:")
                 .font(.title)
-            EmailTextField(email: $email)
+            EmailTextField(email: $viewModel.email)
             Text("Password:")
                 .font(.title)
-            SecureTextField(password: $password, login: login)
-            LoginButton(login: login)
-            EnviromentPicker(enviroment: $enviroment)
+            SecureTextField(password: $viewModel.password, login: viewModel.login)
+            LoginButton(login: viewModel.login)
+            EnviromentPicker(enviroment: $viewModel.enviroment)
             Spacer()
         }
         .padding(.leading, 15.0)
         .padding(.trailing, 15.0)
-    }
-    
-    func login() {
-        print("Login")
     }
 }
 
