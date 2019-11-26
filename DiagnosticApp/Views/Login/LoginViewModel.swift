@@ -6,8 +6,7 @@
 //  Copyright © 2019 Dominic Lanzillotta. All rights reserved.
 //
 
-import Foundation
-import Combine
+import SwiftUI
 
 class LoginViewModel: ObservableObject  {
     @Published var email: String = ""
@@ -17,7 +16,7 @@ class LoginViewModel: ObservableObject  {
     @Published var isLoading: Bool = false
     @Published var isLoginDisabled: Bool = false
     @Published var isLoginWrong: Bool = false
-    @Published var isLoggedIn: Bool = false
+    @Published var isLoggedIn: Bool = true
     
     private var loginService: LoginProtocol
 
@@ -38,5 +37,11 @@ class LoginViewModel: ObservableObject  {
                 self?.isLoginWrong.toggle()
             }
         }
+    }
+}
+
+extension LoginViewModel {
+    var movieView: some View {
+        return MovieViewBuilder.makeMovieView()
     }
 }
