@@ -16,7 +16,7 @@ class LoginViewModel: ObservableObject  {
     @Published var isLoading: Bool = false
     @Published var isLoginDisabled: Bool = false
     @Published var isLoginWrong: Bool = false
-    @Published var isLoggedIn: Bool = true
+    @Published var isLoggedIn: Bool = false
     
     private var loginService: LoginProtocol
 

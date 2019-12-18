@@ -13,20 +13,27 @@ struct LoginView: View {
     @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
     
     var body: some View {
-        LoadingView(isShowing: $viewModel.isLoading) {
-            VStack(alignment: .leading) {
-                Text("Email:")
-                    .font(.title)
-                EmailTextField(email: self.$viewModel.email)
-                Text("Password:")
-                    .font(.title)
-                SecureTextField(password: self.$viewModel.password, login: self.viewModel.login)
-                LoginButton(isDisabled: self.$viewModel.isLoginDisabled, wasFail: self.$viewModel.isLoginWrong, login: self.viewModel.login)
-                EnviromentPicker(enviroment: self.$viewModel.enviroment)
-                Spacer()
+        VStack {
+            LoadingView(isShowing: $viewModel.isLoading) {
+                NavigationView {
+                    VStack(alignment: .leading) {
+                        Text("Email:")
+                            .font(.title)
+                        EmailTextField(email: self.$viewModel.email)
+                        Text("Password:")
+                            .font(.title)
+                        SecureTextField(password: self.$viewModel.password, login: self.viewModel.login)
+                        LoginButton(isDisabled: self.$viewModel.isLoginDisabled, wasFail: self.$viewModel.isLoginWrong, login: self.viewModel.login)
+                        EnviromentPicker(enviroment: self.$viewModel.enviroment)
+                        Spacer()
+                    }
+                    .padding(.leading, 15.0)
+                    .padding(.trailing, 15.0)
+                    NavigationLink(destination: self.viewModel.movieView, isActive: self.$viewModel.isLoggedIn) {
+                        EmptyView()
+                    }
+                }
             }
-            .padding(.leading, 15.0)
-            .padding(.trailing, 15.0)
         }
     }
 }
