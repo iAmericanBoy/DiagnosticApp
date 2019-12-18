@@ -26,12 +26,13 @@ struct LoginView: View {
                         LoginButton(isDisabled: self.$viewModel.isLoginDisabled, wasFail: self.$viewModel.isLoginWrong, login: self.viewModel.login)
                         EnviromentPicker(enviroment: self.$viewModel.enviroment)
                         Spacer()
+                        NavigationLink(destination: self.viewModel.movieView, isActive: self.$viewModel.isLoggedIn) {
+                            EmptyView()
+                        }
                     }
                     .padding(.leading, 15.0)
                     .padding(.trailing, 15.0)
-                    NavigationLink(destination: self.viewModel.movieView, isActive: self.$viewModel.isLoggedIn) {
-                        EmptyView()
-                    }
+
                 }
             }
         }
