@@ -19,6 +19,7 @@
 		B6475F462381B437007FBF7F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6475F452381B436007FBF7F /* UIColor+Extension.swift */; };
 		B6475F482381B87D007FBF7F /* MockLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6475F472381B87D007FBF7F /* MockLogin.swift */; };
 		B6475F4A2381B8F1007FBF7F /* SessionEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6475F492381B8F1007FBF7F /* SessionEnviroment.swift */; };
+		B66ED00023D925BF007F232A /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66ECFFF23D925BF007F232A /* Networker.swift */; };
 		B6856DBA2381D78600B71965 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6856DB92381D78600B71965 /* MovieView.swift */; };
 		B6856DBD2381D7FD00B71965 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6856DBC2381D7FD00B71965 /* MovieViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		B6475F452381B436007FBF7F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B6475F472381B87D007FBF7F /* MockLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLogin.swift; sourceTree = "<group>"; };
 		B6475F492381B8F1007FBF7F /* SessionEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEnviroment.swift; sourceTree = "<group>"; };
+		B66ECFFF23D925BF007F232A /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		B6856DB92381D78600B71965 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		B6856DBC2381D7FD00B71965 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				B6475F492381B8F1007FBF7F /* SessionEnviroment.swift */,
+				B66ECFFF23D925BF007F232A /* Networker.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				B6475F462381B437007FBF7F /* UIColor+Extension.swift in Sources */,
 				B6412518238DD183000C04D8 /* MovieViewBuilder.swift in Sources */,
 				B6475F482381B87D007FBF7F /* MockLogin.swift in Sources */,
+				B66ED00023D925BF007F232A /* Networker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
